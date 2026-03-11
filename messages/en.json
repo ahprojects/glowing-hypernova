@@ -47,7 +47,11 @@
             "history_text": "Starting as a local initiative, we have grown into a global brand that represents Turkish engineering and quality in over 30 countries.",
             "catalog_section_title": "Product",
             "catalog_section_title_gold": "Catalog",
-            "catalog_section_subtitle": "Explore our wide range of high-performance products."
+            "catalog_section_subtitle": "Explore our wide range of high-performance products.",
+            "prof_tactical_title": "Professional & Tactical Line",
+            "prof_tactical_desc": "Engineered for ultimate performance in competition and defense.",
+            "heritage_classic_title": "Heritage & Classic Line",
+            "heritage_classic_desc": "Time-honored tradition and unmatched reliability for the classic hunter."
         },
         "Navbar": {
             "home": "Home",

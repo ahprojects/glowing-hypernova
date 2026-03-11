@@ -71,16 +71,28 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                             <h3>{product.brand} <span className="text-gold">{product.model}</span></h3>
                         </div>
 
-                        <table className="tech-table">
-                            <tbody>
-                                {product.specs.map((spec, index) => (
-                                    <tr key={index}>
-                                        <td>{spec.icon && <i className={`fa-solid ${spec.icon}`}></i>} {spec.label}</td>
-                                        <th>{spec.value}</th>
-                                    </tr>
+                        {/* Game Recommendations */}
+                        {product.gameRecommendations && product.gameRecommendations.length > 0 && (
+                            <div className="game-recommendations" style={{ marginBottom: '30px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+                                {product.gameRecommendations.map((game, i) => (
+                                    <div key={i} className="game-badge" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '6px 12px', background: 'rgba(212, 175, 55, 0.1)', color: '#d4af37', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 600, border: '1px solid rgba(212, 175, 55, 0.3)' }}>
+                                        <i className={`fa-solid ${game.icon}`}></i>
+                                        <span>{game.name}</span>
+                                    </div>
                                 ))}
-                            </tbody>
-                        </table>
+                            </div>
+                        )}
+
+                        {/* Icon-Driven Technical Data */}
+                        <div className="tech-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '15px', marginBottom: '40px' }}>
+                            {product.specs.map((spec, index) => (
+                                <div key={index} className="spec-card" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '8px', padding: '20px', textAlign: 'center', transition: 'all 0.3s ease' }}>
+                                    <i className={`fa-solid ${spec.icon}`} style={{ fontSize: '1.8rem', color: '#d4af37', marginBottom: '15px', display: 'block' }}></i>
+                                    <div className="spec-value" style={{ fontSize: '1.2rem', fontWeight: 800, color: '#fff', marginBottom: '5px' }}>{spec.value}</div>
+                                    <div className="spec-label" style={{ fontSize: '0.8rem', color: '#9da3af', textTransform: 'uppercase', letterSpacing: '1px' }}>{spec.label}</div>
+                                </div>
+                            ))}
+                        </div>
 
                         <div className="spec-actions">
                             <button className="btn btn-primary">

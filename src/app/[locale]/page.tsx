@@ -12,11 +12,11 @@ export default function HomePage() {
       <section className="hero">
         <div className="hero-overlay"></div>
         <div className="hero-content">
-          <h1 className="hero-title">
+          <h1 className="hero-title font-heritage" style={{ fontSize: '6rem', fontStyle: 'italic' }}>
             {t('title').split(' ').slice(0, -1).join(' ')}{' '}
             <span className="text-gold">{t('title').split(' ').slice(-1)}</span>
           </h1>
-          <p className="hero-subtitle">{t('subtitle')}</p>
+          <p className="hero-subtitle" style={{ fontSize: '1.4rem', color: '#e0e0e0', fontWeight: 400, letterSpacing: '1px' }}>{t('subtitle')}</p>
           <div className="hero-sectors" style={{ marginTop: '30px', display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="#brands" className="btn btn-outline" style={{ borderColor: '#f39c12', color: '#f39c12' }}>
               <i className="fa-solid fa-tree"></i> {t('btn_hunting')}
@@ -35,12 +35,17 @@ export default function HomePage() {
       <section id="catalog" className="brands-section section-padding">
         <div id="brands" className="container">
           <div className="section-header text-center">
-            <h2>{t('catalog_section_title')} <span className="text-gold">{t('catalog_section_title_gold')}</span></h2>
+            <h2 className="font-heritage" style={{ fontSize: '3.5rem', letterSpacing: '1px' }}>{t('catalog_section_title')} <span className="text-gold">{t('catalog_section_title_gold')}</span></h2>
             <div className="header-line"></div>
-            <p>{t('catalog_section_subtitle')}</p>
+            <p style={{ letterSpacing: '0.5px' }}>{t('catalog_section_subtitle')}</p>
           </div>
 
-          <div className="brands-grid">
+          {/* Professional & Tactical Line */}
+          <div style={{ textAlign: 'center', marginBottom: '40px', marginTop: '50px' }}>
+            <h3 className="font-heritage" style={{ fontSize: '2.2rem', color: '#fff' }}>{t('prof_tactical_title')}</h3>
+            <p style={{ color: '#9da3af' }}>{t('prof_tactical_desc')}</p>
+          </div>
+          <div className="brands-grid" style={{ marginBottom: '60px' }}>
             {/* JET */}
             <Link href="/catalog/jet-trap-24" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
               <div className="brand-logo-container">
@@ -48,44 +53,6 @@ export default function HomePage() {
               </div>
               <h4>{t('jet_title')}</h4>
               <p>{t('jet_desc')}</p>
-              <div style={{ marginTop: '20px', color: 'var(--accent-gold)', fontWeight: 'bold' }}>
-                {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
-              </div>
-            </Link>
-
-            {/* GOLD HORSE */}
-            <Link href="/catalog/gold-horse-32" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
-              <div className="brand-logo-container">
-                <h3 className="brand-name gold-horse-brand">Gold Horse</h3>
-              </div>
-              <h4>{t('gold_horse_title')}</h4>
-              <p>{t('gold_horse_desc')}</p>
-              <div style={{ marginTop: '20px', color: 'var(--accent-gold)', fontWeight: 'bold' }}>
-                {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
-              </div>
-            </Link>
-
-            {/* MIRACLE */}
-            <Link href="/catalog/miracle-long-range" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
-              <div className="brand-logo-container">
-                <h3 className="brand-name" style={{ textTransform: 'lowercase', fontWeight: 500, fontFamily: 'var(--font-inter), sans-serif', letterSpacing: '1px', color: '#a0a0a0', fontSize: '2.2rem', borderBottom: '2px solid #555', paddingBottom: '5px' }}>
-                  miracle
-                </h3>
-              </div>
-              <h4>{t('miracle_title')}</h4>
-              <p>{t('miracle_desc')}</p>
-              <div style={{ marginTop: '20px', color: 'var(--accent-gold)', fontWeight: 'bold' }}>
-                {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
-              </div>
-            </Link>
-
-            {/* APOLLO */}
-            <Link href="/catalog/apollo-classic-quail" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
-              <div className="brand-logo-container">
-                <h3 className="brand-name apollo-brand" style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 800, color: '#2ecc71' }}>APOLLO</h3>
-              </div>
-              <h4>{t('apollo_title')}</h4>
-              <p>{t('apollo_desc')}</p>
               <div style={{ marginTop: '20px', color: 'var(--accent-gold)', fontWeight: 'bold' }}>
                 {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
               </div>
@@ -100,6 +67,20 @@ export default function HomePage() {
               </div>
               <h4>{t('apport_title')}</h4>
               <p>{t('apport_desc')}</p>
+              <div style={{ marginTop: '20px', color: 'var(--accent-gold)', fontWeight: 'bold' }}>
+                {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
+              </div>
+            </Link>
+
+            {/* MIRACLE */}
+            <Link href="/catalog/miracle-long-range" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
+              <div className="brand-logo-container">
+                <h3 className="brand-name" style={{ textTransform: 'lowercase', fontWeight: 500, fontFamily: 'var(--font-inter), sans-serif', letterSpacing: '1px', color: '#a0a0a0', fontSize: '2.2rem', borderBottom: '2px solid #555', paddingBottom: '5px' }}>
+                  miracle
+                </h3>
+              </div>
+              <h4>{t('miracle_title')}</h4>
+              <p>{t('miracle_desc')}</p>
               <div style={{ marginTop: '20px', color: 'var(--accent-gold)', fontWeight: 'bold' }}>
                 {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
               </div>
@@ -134,6 +115,37 @@ export default function HomePage() {
                 {t('visit_website')} <i className="fa-solid fa-arrow-up-right-from-square" style={{ marginLeft: '8px' }}></i>
               </a>
             </div>
+          </div>
+
+          {/* Heritage & Classic Line */}
+          <div style={{ textAlign: 'center', marginBottom: '40px', marginTop: '80px' }}>
+            <h3 className="font-heritage" style={{ fontSize: '2.2rem', color: '#fff' }}>{t('heritage_classic_title')}</h3>
+            <p style={{ color: '#9da3af' }}>{t('heritage_classic_desc')}</p>
+          </div>
+          <div className="brands-grid">
+            {/* GOLD HORSE */}
+            <Link href="/catalog/gold-horse-32" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
+              <div className="brand-logo-container">
+                <h3 className="brand-name gold-horse-brand">Gold Horse</h3>
+              </div>
+              <h4>{t('gold_horse_title')}</h4>
+              <p>{t('gold_horse_desc')}</p>
+              <div style={{ marginTop: '20px', color: 'var(--accent-gold)', fontWeight: 'bold' }}>
+                {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
+              </div>
+            </Link>
+
+            {/* APOLLO */}
+            <Link href="/catalog/apollo-classic-quail" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
+              <div className="brand-logo-container">
+                <h3 className="brand-name apollo-brand" style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 800, color: '#2ecc71' }}>APOLLO</h3>
+              </div>
+              <h4>{t('apollo_title')}</h4>
+              <p>{t('apollo_desc')}</p>
+              <div style={{ marginTop: '20px', color: 'var(--accent-gold)', fontWeight: 'bold' }}>
+                {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
+              </div>
+            </Link>
 
             {/* CEO GUNS */}
             <div id="ceo-guns" className="brand-card shadow-hover" style={{ borderColor: '#7f8c8d' }}>
@@ -156,9 +168,9 @@ export default function HomePage() {
       <section id="corporate" className="corporate-section section-padding bg-darker" style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
         <div className="container">
           <div className="section-header text-center">
-            <h2>{t('corporate_title')} <span className="text-gold">{t('corporate_title_gold')}</span></h2>
+            <h2 className="font-heritage" style={{ fontSize: '3.5rem', letterSpacing: '1px' }}>{t('corporate_title')} <span className="text-gold">{t('corporate_title_gold')}</span></h2>
             <div className="header-line"></div>
-            <p>{t('corporate_subtitle')}</p>
+            <p style={{ letterSpacing: '0.5px' }}>{t('corporate_subtitle')}</p>
           </div>
 
           <div className="corporate-content" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', marginTop: '50px' }}>

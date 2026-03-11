@@ -47,7 +47,11 @@
             "history_text": "Yerel bir girişim olarak başladığımız bu yolculukta, bugün 30'dan fazla ülkede Türk mühendisliğini ve kalitesini temsil eden küresel bir marka haline geldik.",
             "catalog_section_title": "Ürün",
             "catalog_section_title_gold": "Kataloğu",
-            "catalog_section_subtitle": "Geniş ürün yelpazemizi ve yüksek performanslı çözümlerimizi keşfedin."
+            "catalog_section_subtitle": "Geniş ürün yelpazemizi ve yüksek performanslı çözümlerimizi keşfedin.",
+            "prof_tactical_title": "Profesyonel ve Taktik Seri",
+            "prof_tactical_desc": "Müsabaka ve savunma alanında üstün performans için tasarlandı.",
+            "heritage_classic_title": "Klasik ve Miras Serisi",
+            "heritage_classic_desc": "Klasik avcılar için zamana meydan okuyan gelenek ve eşsiz güvenilirlik."
         },
         "Navbar": {
             "home": "Ana Sayfa",

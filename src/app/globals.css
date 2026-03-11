@@ -1,4 +1,4 @@
-﻿/* CSS Reset & Premium Variables */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -15,6 +15,7 @@
     --border-color: rgba(255, 255, 255, 0.08);
 
     font-family: 'Inter', sans-serif;
+    --font-heritage: 'Playfair Display', serif;
 }
 
 * {
@@ -72,6 +73,10 @@ ul {
 
 .text-center {
     text-align: center;
+}
+
+.font-heritage {
+    font-family: var(--font-heritage);
 }
 
 /* Buttons */
@@ -194,7 +199,10 @@ ul {
     display: flex;
     align-items: center;
     position: relative;
-    background: linear-gradient(135deg, #0f131a 0%, #050608 100%);
+    background-image: url('/hero-landscape.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     overflow: hidden;
 }
 
