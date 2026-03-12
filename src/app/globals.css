@@ -383,7 +383,20 @@ ul {
 }
 
 .sector-selection {
-    padding-bottom: 0;
+    padding-bottom: 30px;
+}
+
+.brand-group-container {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(20px);
+}
+
+.brand-group-container.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .sector-grid {
@@ -1142,16 +1155,16 @@ ul {
 }
 
 /* Scroll Reveal Animations (Only active if JS is detected) */
-.js-available .reveal {
+.js-available .reveal:not(.reveal-active) {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: opacity, transform;
+    transform: translateY(20px);
+    transition: none; /* No transition while hidden to prevent flicker */
 }
 
-.reveal-active {
-    opacity: 1;
-    transform: translateY(0);
+.reveal.reveal-active {
+    opacity: 1 !important;
+    transform: translateY(0) translateX(0) !important;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .reveal-delay-1 { transition-delay: 0.2s; }
