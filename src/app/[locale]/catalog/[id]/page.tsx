@@ -1,7 +1,8 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import { products } from '@/data/products';
 import { notFound } from 'next/navigation';
-import { getTranslations } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { routing, Link } from '@/i18n/routing';
 
 export const dynamic = 'force-static';
@@ -16,7 +17,8 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string, locale: string }> }): Promise<Metadata> {
-    const { id } = await params;
+    const { id, locale } = await params;
+    setRequestLocale(locale);
     const product = products.find((p) => p.id === id);
 
     if (!product) return {};
@@ -28,7 +30,9 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ id: string, locale: string }> }) {
-    const { id } = await params;
+    const { id, locale } = await params;
+    setRequestLocale(locale);
+    
     const product = products.find((p) => p.id === id);
     const t = await getTranslations('HomePage.Catalog');
 
@@ -56,11 +60,27 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                 <div className="catalog-layout">
                     {/* Product Imagery */}
                     <div className="product-gallery">
-                        <div className="main-image-box">
-                            <div className="image-placeholder">
-                                <i className="fa-solid fa-box-open"></i>
-                                <span>{product.brand} {product.category === 'CEO Guns' ? 'Silah' : 'Mühimmat'} Görseli</span>
-                            </div>
+                        <div className="main-image-box" style={{ background: 'transparent', border: 'none', boxShadow: 'none' }}>
+                            {product.imageUrl && product.imageUrl !== '' ? (
+                                <Image 
+                                    src={product.imageUrl} 
+                                    alt={`${product.brand} ${product.model}`} 
+                                    width={600} 
+                                    height={450}
+                                    style={{ 
+                                        objectFit: 'contain', 
+                                        width: '100%', 
+                                        height: '100%', 
+                                        maxHeight: '400px'
+                                    }}
+                                    priority
+                                />
+                            ) : (
+                                <div className="image-placeholder">
+                                    <i className="fa-solid fa-box-open"></i>
+                                    <span>{product.brand} {product.category === 'CEO Guns' ? 'Silah' : 'Mühimmat'} Görseli</span>
+                                </div>
+                            )}
                         </div>
                     </div>
 
@@ -84,12 +104,12 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                         )}
 
                         {/* Icon-Driven Technical Data */}
-                        <div className="tech-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '15px', marginBottom: '40px' }}>
+                        <div className="spec-grid">
                             {product.specs.map((spec, index) => (
-                                <div key={index} className="spec-card" style={{ background: 'rgba(255, 255, 255, 0.03)', border: '1px solid rgba(255, 255, 255, 0.08)', borderRadius: '8px', padding: '20px', textAlign: 'center', transition: 'all 0.3s ease' }}>
-                                    <i className={`fa-solid ${spec.icon}`} style={{ fontSize: '1.8rem', color: '#d4af37', marginBottom: '15px', display: 'block' }}></i>
-                                    <div className="spec-value" style={{ fontSize: '1.2rem', fontWeight: 800, color: '#fff', marginBottom: '5px' }}>{spec.value}</div>
-                                    <div className="spec-label" style={{ fontSize: '0.8rem', color: '#9da3af', textTransform: 'uppercase', letterSpacing: '1px' }}>{spec.label}</div>
+                                <div key={index} className="spec-card">
+                                    <i className={`fa-solid ${spec.icon}`}></i>
+                                    <div className="spec-value">{spec.value}</div>
+                                    <div className="spec-label">{t((spec.label || '') as any)}</div>
                                 </div>
                             ))}
                         </div>

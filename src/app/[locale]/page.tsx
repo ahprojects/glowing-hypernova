@@ -2,9 +2,13 @@
 
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/routing';
+import { products } from '@/data/products';
+import Image from 'next/image';
 
 export default function HomePage() {
   const t = useTranslations('HomePage.Index');
+
+  const jetProducts = products.filter(p => p.brand === 'JET');
 
   return (
     <>
@@ -40,81 +44,68 @@ export default function HomePage() {
             <p style={{ letterSpacing: '0.5px' }}>{t('catalog_section_subtitle')}</p>
           </div>
 
-          {/* Professional & Tactical Line */}
+          {/* JET Brand Full Products */}
           <div style={{ textAlign: 'center', marginBottom: '40px', marginTop: '50px' }}>
             <h3 className="font-heritage" style={{ fontSize: '2.2rem', color: '#fff' }}>{t('prof_tactical_title')}</h3>
             <p style={{ color: '#9da3af' }}>{t('prof_tactical_desc')}</p>
           </div>
+
           <div className="brands-grid" style={{ marginBottom: '60px' }}>
             {/* JET */}
-            <Link href="/catalog/jet-trap-24" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
+            <Link href="/brand/jet" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
               <div className="brand-logo-container">
-                <h3 className="brand-name jet-brand">JET<span className="reg-mark">&reg;</span></h3>
+                <h3 className="brand-name jet-brand" style={{ fontSize: '2.5rem' }}>JET<span style={{ fontSize: '1rem', fontStyle: 'normal', background: 'none', WebkitTextFillColor: '#aaa', verticalAlign: 'super' }}>®</span></h3>
               </div>
-              <h4>{t('jet_title')}</h4>
-              <p>{t('jet_desc')}</p>
-              <div style={{ marginTop: '20px', color: 'var(--accent-gold)', fontWeight: 'bold' }}>
+              <h4 style={{ color: 'var(--accent-gold)', marginBottom: '15px', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{t('jet_title')}</h4>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6' }}>{t('jet_desc')}</p>
+              <div style={{ marginTop: '20px', color: 'var(--accent-gold)', fontWeight: 'bold', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
                 {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
               </div>
             </Link>
 
             {/* APPORT */}
-            <Link href="/catalog/apport-sporting-28" className="brand-card shadow-hover" style={{ textDecoration: 'none', borderColor: '#3498db' }}>
+            <Link href="/brand/apport" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
               <div className="brand-logo-container">
                 <h3 className="brand-name" style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 800, color: '#3498db', letterSpacing: '1px' }}>
                   APPORT
                 </h3>
               </div>
-              <h4>{t('apport_title')}</h4>
-              <p>{t('apport_desc')}</p>
-              <div style={{ marginTop: '20px', color: 'var(--accent-gold)', fontWeight: 'bold' }}>
+              <h4 style={{ color: 'var(--accent-gold)', marginBottom: '15px', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{t('apport_title')}</h4>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6' }}>{t('apport_desc')}</p>
+              <div style={{ marginTop: '20px', color: 'var(--accent-gold)', fontWeight: 'bold', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
                 {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
               </div>
             </Link>
+          </div>
 
-            {/* MIRACLE */}
-            <Link href="/catalog/miracle-long-range" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
-              <div className="brand-logo-container">
-                <h3 className="brand-name" style={{ textTransform: 'lowercase', fontWeight: 500, fontFamily: 'var(--font-inter), sans-serif', letterSpacing: '1px', color: '#a0a0a0', fontSize: '2.2rem', borderBottom: '2px solid #555', paddingBottom: '5px' }}>
-                  miracle
-                </h3>
-              </div>
-              <h4>{t('miracle_title')}</h4>
-              <p>{t('miracle_desc')}</p>
-              <div style={{ marginTop: '20px', color: 'var(--accent-gold)', fontWeight: 'bold' }}>
-                {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
-              </div>
-            </Link>
-
-            {/* IDETECH */}
-            <div id="idetech-defense" className="brand-card" style={{ borderColor: '#c0392b', gridColumn: '1 / -1', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: '40px' }}>
-              <div className="brand-logo-container">
-                <h3 className="brand-name jet-brand" style={{ color: '#e74c3c', background: 'none', WebkitTextFillColor: '#e74c3c', fontSize: '3rem' }}>
-                  IDETECH
-                </h3>
-              </div>
-              <h4 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '20px' }}>{t('idetech_title')}</h4>
-              <p style={{ maxWidth: '800px', marginBottom: '30px' }}>{t('idetech_desc')}</p>
-
-              <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap', width: '100%', marginBottom: '30px' }}>
-                <div style={{ background: 'rgba(231, 76, 60, 0.1)', border: '1px solid rgba(231, 76, 60, 0.3)', padding: '15px', borderRadius: '8px', flex: 1, minWidth: '200px' }}>
-                  <h5 style={{ color: '#e74c3c', marginBottom: '10px', fontSize: '1rem' }}><i className="fa-solid fa-shield-virus"></i> {t('idetech_less_lethal')}</h5>
-                  <p style={{ fontSize: '0.85rem' }}>{t('idetech_less_lethal_desc')}</p>
-                </div>
-                <div style={{ background: 'rgba(231, 76, 60, 0.1)', border: '1px solid rgba(231, 76, 60, 0.3)', padding: '15px', borderRadius: '8px', flex: 1, minWidth: '200px' }}>
-                  <h5 style={{ color: '#e74c3c', marginBottom: '10px', fontSize: '1rem' }}><i className="fa-solid fa-door-open"></i> {t('idetech_breach')}</h5>
-                  <p style={{ fontSize: '0.85rem' }}>{t('idetech_breach_desc')}</p>
-                </div>
-                <div style={{ background: 'rgba(231, 76, 60, 0.1)', border: '1px solid rgba(231, 76, 60, 0.3)', padding: '15px', borderRadius: '8px', flex: 1, minWidth: '200px' }}>
-                  <h5 style={{ color: '#e74c3c', marginBottom: '10px', fontSize: '1rem' }}><i className="fa-solid fa-smog"></i> {t('idetech_cs')}</h5>
-                  <p style={{ fontSize: '0.85rem' }}>{t('idetech_cs_desc')}</p>
-                </div>
-              </div>
-
-              <a href="https://idetech.com.tr/" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ backgroundColor: '#c0392b', borderColor: '#c0392b' }}>
-                {t('visit_website')} <i className="fa-solid fa-arrow-up-right-from-square" style={{ marginLeft: '8px' }}></i>
-              </a>
+          {/* IDETECH */}
+          <div id="idetech-defense" className="brand-card" style={{ borderColor: '#c0392b', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: '40px', marginBottom: '60px', background: 'rgba(192, 57, 43, 0.05)' }}>
+            <div className="brand-logo-container">
+              <h3 className="brand-name jet-brand" style={{ color: '#e74c3c', background: 'none', WebkitTextFillColor: '#e74c3c', fontSize: '3rem' }}>
+                IDETECH
+              </h3>
             </div>
+            <h4 style={{ color: '#e74c3c', marginBottom: '20px', fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '1px' }}>{t('idetech_title')}</h4>
+            <p style={{ maxWidth: '800px', marginBottom: '30px', color: 'var(--text-secondary)' }}>{t('idetech_desc')}</p>
+
+            <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap', width: '100%', marginBottom: '40px' }}>
+              <div style={{ background: 'rgba(231, 76, 60, 0.1)', border: '1px solid rgba(231, 76, 60, 0.2)', padding: '20px', borderRadius: '12px', flex: 1, minWidth: '250px', transition: 'all 0.3s ease' }}>
+                <h5 style={{ color: '#e74c3c', marginBottom: '12px', fontSize: '1.1rem', fontWeight: 700 }}><i className="fa-solid fa-shield-virus"></i> {t('idetech_less_lethal')}</h5>
+                <p style={{ fontSize: '0.9rem', color: '#ccc' }}>{t('idetech_less_lethal_desc')}</p>
+              </div>
+              <div style={{ background: 'rgba(231, 76, 60, 0.1)', border: '1px solid rgba(231, 76, 60, 0.2)', padding: '20px', borderRadius: '12px', flex: 1, minWidth: '250px', transition: 'all 0.3s ease' }}>
+                <h5 style={{ color: '#e74c3c', marginBottom: '12px', fontSize: '1.1rem', fontWeight: 700 }}><i className="fa-solid fa-door-open"></i> {t('idetech_breach')}</h5>
+                <p style={{ fontSize: '0.9rem', color: '#ccc' }}>{t('idetech_breach_desc')}</p>
+              </div>
+              <div style={{ background: 'rgba(231, 76, 60, 0.1)', border: '1px solid rgba(231, 76, 60, 0.2)', padding: '20px', borderRadius: '12px', flex: 1, minWidth: '250px', transition: 'all 0.3s ease' }}>
+                <h5 style={{ color: '#e74c3c', marginBottom: '12px', fontSize: '1.1rem', fontWeight: 700 }}><i className="fa-solid fa-smog"></i> {t('idetech_cs')}</h5>
+                <p style={{ fontSize: '0.9rem', color: '#ccc' }}>{t('idetech_cs_desc')}</p>
+              </div>
+            </div>
+
+            <a href="https://idetech.com.tr/" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ backgroundColor: '#c0392b', borderColor: '#c0392b', color: '#fff' }}>
+              {t('visit_website')} <i className="fa-solid fa-arrow-up-right-from-square" style={{ marginLeft: '8px' }}></i>
+            </a>
           </div>
 
           {/* Heritage & Classic Line */}
@@ -124,25 +115,39 @@ export default function HomePage() {
           </div>
           <div className="brands-grid">
             {/* GOLD HORSE */}
-            <Link href="/catalog/gold-horse-32" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
+            <Link href="/brand/gold-horse" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
               <div className="brand-logo-container">
                 <h3 className="brand-name gold-horse-brand">Gold Horse</h3>
               </div>
-              <h4>{t('gold_horse_title')}</h4>
-              <p>{t('gold_horse_desc')}</p>
-              <div style={{ marginTop: '20px', color: 'var(--accent-gold)', fontWeight: 'bold' }}>
+              <h4 style={{ color: 'var(--accent-gold)', marginBottom: '15px', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{t('gold_horse_title')}</h4>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6' }}>{t('gold_horse_desc')}</p>
+              <div style={{ marginTop: '20px', color: 'var(--accent-gold)', fontWeight: 'bold', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
+                {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
+              </div>
+            </Link>
+
+            {/* MIRACLE */}
+            <Link href="/brand/miracle" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
+              <div className="brand-logo-container">
+                <h3 className="brand-name" style={{ textTransform: 'lowercase', fontWeight: 500, fontFamily: 'var(--font-inter), sans-serif', letterSpacing: '1px', color: '#a0a0a0', fontSize: '2.2rem', borderBottom: '2px solid #555', paddingBottom: '5px' }}>
+                  miracle
+                </h3>
+              </div>
+              <h4 style={{ color: 'var(--accent-gold)', marginBottom: '15px', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{t('miracle_title')}</h4>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6' }}>{t('miracle_desc')}</p>
+              <div style={{ marginTop: '20px', color: 'var(--accent-gold)', fontWeight: 'bold', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
                 {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
               </div>
             </Link>
 
             {/* APOLLO */}
-            <Link href="/catalog/apollo-classic-quail" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
+            <Link href="/brand/apollo" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
               <div className="brand-logo-container">
                 <h3 className="brand-name apollo-brand" style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 800, color: '#2ecc71' }}>APOLLO</h3>
               </div>
-              <h4>{t('apollo_title')}</h4>
-              <p>{t('apollo_desc')}</p>
-              <div style={{ marginTop: '20px', color: 'var(--accent-gold)', fontWeight: 'bold' }}>
+              <h4 style={{ color: 'var(--accent-gold)', marginBottom: '15px', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>{t('apollo_title')}</h4>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6' }}>{t('apollo_desc')}</p>
+              <div style={{ marginTop: '20px', color: 'var(--accent-gold)', fontWeight: 'bold', fontSize: '0.9rem', display: 'flex', alignItems: 'center', gap: '8px' }}>
                 {t('read_more')} <i className="fa-solid fa-arrow-right"></i>
               </div>
             </Link>
@@ -154,9 +159,9 @@ export default function HomePage() {
                   CEO GUNS
                 </h3>
               </div>
-              <h4>{t('ceoguns_title')}</h4>
-              <p>{t('ceoguns_desc')}</p>
-              <a href="https://ceoguns.com.tr/#1" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ marginTop: '20px', borderColor: '#7f8c8d', color: '#ecf0f1' }}>
+              <h4 style={{ color: '#ecf0f1', marginBottom: '15px', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '1px' }}>{t('ceoguns_title')}</h4>
+              <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6' }}>{t('ceoguns_desc')}</p>
+              <a href="https://ceoguns.com.tr/#1" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ marginTop: '25px', borderColor: '#7f8c8d', color: '#ecf0f1', padding: '12px 25px', fontSize: '0.9rem' }}>
                 {t('visit_website')} <i className="fa-solid fa-arrow-up-right-from-square" style={{ marginLeft: '8px' }}></i>
               </a>
             </div>
