@@ -868,4 +868,134 @@ ul {
 .game-badge:hover {
     background: rgba(197, 160, 79, 0.15);
     border-color: var(--accent-gold);
-}
+}
+
+/* Hero Buttons Variants */
+.btn-hunting {
+    border-color: #f39c12 !important;
+    color: #f39c12 !important;
+}
+
+.btn-defense {
+    background-color: #c0392b !important;
+    border-color: #c0392b !important;
+}
+
+.btn-guns {
+    border-color: #7f8c8d !important;
+    color: #ecf0f1 !important;
+}
+
+/* Specific Brand Cards & Sections */
+.defense-brand-card {
+    border-color: #c0392b !important;
+    background: rgba(192, 57, 43, 0.05) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 40px !important;
+    margin-bottom: 60px;
+}
+
+.defense-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.defense-feature {
+    background: rgba(231, 76, 60, 0.1);
+    border: 1px solid rgba(231, 76, 60, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 250px;
+    transition: all 0.3s ease;
+}
+
+.defense-feature:hover {
+    transform: translateY(-5px);
+    background: rgba(231, 76, 60, 0.15);
+    border-color: #e74c3c;
+}
+
+.defense-feature h5 {
+    color: #e74c3c;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.tactical-brand-card {
+    border-color: #7f8c8d !important;
+}
+
+/* Corporate Info Cards */
+.corp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.corp-main-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 12px;
+    border-left: 5px solid var(--accent-gold);
+}
+
+.corp-sub-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.corp-sub-card {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.corp-sub-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: var(--accent-gold-dark);
+}
+
+.corp-sub-card h4 {
+    color: var(--accent-gold);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+/* Map Section */
+.map-canvas {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 450px;
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-premium);
+}
+
+.map-placeholder-dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    background-image: radial-gradient(circle, #333 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+

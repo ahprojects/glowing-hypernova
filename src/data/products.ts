@@ -179,13 +179,13 @@ export const products: Product[] = [
         ]
     },
     {
-        id: 'gold-horse-32',
+        id: 'gold-horse-32-taslak',
         brand: 'Gold Horse',
         model: 'Classic 32gr (Taslak)',
         caliber: '12',
         category: 'Av & Spor',
         description: 'Klasik avcılar için mükemmel basınç kontrolü ve gecikmeli açılma sağlayan Türkiye\'nin tek fişek mühürleme teknolojisi.',
-        imageUrl: '/images/gold-horse.png',
+        imageUrl: '/images/gold-horse-taslak.png',
         gameRecommendations: [
             { name: 'Sülün (Pheasant)', icon: 'fa-feather' },
             { name: 'Keklik (Partridge)', icon: 'fa-dove' },
@@ -340,7 +340,7 @@ export const products: Product[] = [
         caliber: '12',
         category: 'Av & Spor',
         description: 'Bıldırcın avı için optimize edilmiş, geniş dağılım ve yüksek grupman performansı sunan klasik av fişeği.',
-        imageUrl: '/images/apollo-box.png',
+        imageUrl: '/images/apollo-box-taslak.png',
         gameRecommendations: [
             { name: 'Bıldırcın (Quail)', icon: 'fa-crow' },
             { name: 'Çulluk (Woodcock)', icon: 'fa-tree' }
@@ -472,7 +472,7 @@ export const products: Product[] = [
         caliber: '12',
         category: 'Av & Spor',
         description: 'Sporting ve genel atış müsabakaları için üretilmiş, yüksek hız ve düşük basınç dengesine sahip spor fişeği.',
-        imageUrl: '/images/apport-box.png',
+        imageUrl: '/images/apport-box-taslak.png',
         gameRecommendations: [
             { name: 'Sporting Clays', icon: 'fa-bullseye' },
             { name: 'Compak', icon: 'fa-crosshairs' }

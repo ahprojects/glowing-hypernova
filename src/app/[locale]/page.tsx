@@ -16,19 +16,19 @@ export default function HomePage() {
       <section className="hero">
         <div className="hero-overlay"></div>
         <div className="hero-content">
-          <h1 className="hero-title font-heritage" style={{ fontSize: '6rem', fontStyle: 'italic' }}>
+          <h1 className="hero-title font-heritage">
             {t('title').split(' ').slice(0, -1).join(' ')}{' '}
             <span className="text-gold">{t('title').split(' ').slice(-1)}</span>
           </h1>
-          <p className="hero-subtitle" style={{ fontSize: '1.4rem', color: '#e0e0e0', fontWeight: 400, letterSpacing: '1px' }}>{t('subtitle')}</p>
-          <div className="hero-sectors" style={{ marginTop: '30px', display: 'flex', gap: '15px', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="#brands" className="btn btn-outline" style={{ borderColor: '#f39c12', color: '#f39c12' }}>
+          <p className="hero-subtitle">{t('subtitle')}</p>
+          <div className="hero-sectors">
+            <a href="#brands" className="btn btn-outline btn-hunting">
               <i className="fa-solid fa-tree"></i> {t('btn_hunting')}
             </a>
-            <a href="#idetech-defense" className="btn btn-primary" style={{ backgroundColor: '#c0392b', borderColor: '#c0392b' }}>
+            <a href="#idetech-defense" className="btn btn-primary btn-defense">
               <i className="fa-solid fa-shield-halved"></i> {t('btn_defense')}
             </a>
-            <a href="#ceo-guns" className="btn btn-outline" style={{ borderColor: '#7f8c8d', color: '#ecf0f1' }}>
+            <a href="#ceo-guns" className="btn btn-outline btn-guns">
               <i className="fa-solid fa-crosshairs"></i> {t('btn_guns')}
             </a>
           </div>
@@ -79,26 +79,26 @@ export default function HomePage() {
           </div>
 
           {/* IDETECH */}
-          <div id="idetech-defense" className="brand-card" style={{ borderColor: '#c0392b', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', padding: '40px', marginBottom: '60px', background: 'rgba(192, 57, 43, 0.05)' }}>
+          <div id="idetech-defense" className="brand-card defense-brand-card">
             <div className="brand-logo-container">
               <h3 className="brand-name jet-brand" style={{ color: '#e74c3c', background: 'none', WebkitTextFillColor: '#e74c3c', fontSize: '3rem' }}>
                 IDETECH
               </h3>
             </div>
             <h4 style={{ color: '#e74c3c', marginBottom: '20px', fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '1px' }}>{t('idetech_title')}</h4>
-            <p style={{ maxWidth: '800px', marginBottom: '30px', color: 'var(--text-secondary)' }}>{t('idetech_desc')}</p>
+            <p className="section-subtitle-premium" style={{ maxWidth: '800px', marginBottom: '30px' }}>{t('idetech_desc')}</p>
 
-            <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap', width: '100%', marginBottom: '40px' }}>
-              <div style={{ background: 'rgba(231, 76, 60, 0.1)', border: '1px solid rgba(231, 76, 60, 0.2)', padding: '20px', borderRadius: '12px', flex: 1, minWidth: '250px', transition: 'all 0.3s ease' }}>
-                <h5 style={{ color: '#e74c3c', marginBottom: '12px', fontSize: '1.1rem', fontWeight: 700 }}><i className="fa-solid fa-shield-virus"></i> {t('idetech_less_lethal')}</h5>
+            <div className="defense-grid">
+              <div className="defense-feature">
+                <h5><i className="fa-solid fa-shield-virus"></i> {t('idetech_less_lethal')}</h5>
                 <p style={{ fontSize: '0.9rem', color: '#ccc' }}>{t('idetech_less_lethal_desc')}</p>
               </div>
-              <div style={{ background: 'rgba(231, 76, 60, 0.1)', border: '1px solid rgba(231, 76, 60, 0.2)', padding: '20px', borderRadius: '12px', flex: 1, minWidth: '250px', transition: 'all 0.3s ease' }}>
-                <h5 style={{ color: '#e74c3c', marginBottom: '12px', fontSize: '1.1rem', fontWeight: 700 }}><i className="fa-solid fa-door-open"></i> {t('idetech_breach')}</h5>
+              <div className="defense-feature">
+                <h5><i className="fa-solid fa-door-open"></i> {t('idetech_breach')}</h5>
                 <p style={{ fontSize: '0.9rem', color: '#ccc' }}>{t('idetech_breach_desc')}</p>
               </div>
-              <div style={{ background: 'rgba(231, 76, 60, 0.1)', border: '1px solid rgba(231, 76, 60, 0.2)', padding: '20px', borderRadius: '12px', flex: 1, minWidth: '250px', transition: 'all 0.3s ease' }}>
-                <h5 style={{ color: '#e74c3c', marginBottom: '12px', fontSize: '1.1rem', fontWeight: 700 }}><i className="fa-solid fa-smog"></i> {t('idetech_cs')}</h5>
+              <div className="defense-feature">
+                <h5><i className="fa-solid fa-smog"></i> {t('idetech_cs')}</h5>
                 <p style={{ fontSize: '0.9rem', color: '#ccc' }}>{t('idetech_cs_desc')}</p>
               </div>
             </div>
@@ -153,7 +153,7 @@ export default function HomePage() {
             </Link>
 
             {/* CEO GUNS */}
-            <div id="ceo-guns" className="brand-card shadow-hover" style={{ borderColor: '#7f8c8d' }}>
+            <div id="ceo-guns" className="brand-card shadow-hover tactical-brand-card">
               <div className="brand-logo-container">
                 <h3 className="brand-name" style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 800, color: '#ecf0f1', background: 'none', WebkitTextFillColor: '#ecf0f1', letterSpacing: '2px' }}>
                   CEO GUNS
@@ -178,24 +178,24 @@ export default function HomePage() {
             <p style={{ letterSpacing: '0.5px' }}>{t('corporate_subtitle')}</p>
           </div>
 
-          <div className="corporate-content" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px', marginTop: '50px' }}>
-            <div className="corp-card" style={{ background: 'rgba(255,255,255,0.03)', padding: '30px', borderRadius: '12px', borderLeft: '4px solid var(--accent-gold)' }}>
+          <div className="corp-grid">
+            <div className="corp-main-card">
               <h3 style={{ fontSize: '1.5rem', marginBottom: '20px', color: '#fff' }}>Hakkımızda</h3>
               <p style={{ lineHeight: '1.8', fontSize: '1rem', color: 'var(--text-secondary)' }}>
                 {t('about_text')}
               </p>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '30px' }}>
-              <div className="corp-card-sub" style={{ background: 'rgba(255,255,255,0.02)', padding: '25px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                <h4 style={{ color: 'var(--accent-gold)', marginBottom: '10px', fontSize: '1.1rem' }}>
+            <div className="corp-sub-column">
+              <div className="corp-sub-card">
+                <h4>
                   <i className="fa-solid fa-bullseye" style={{ marginRight: '10px' }}></i> {t('mission_title')}
                 </h4>
                 <p style={{ fontSize: '0.9rem' }}>{t('mission_text')}</p>
               </div>
 
-              <div className="corp-card-sub" style={{ background: 'rgba(255,255,255,0.02)', padding: '25px', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                <h4 style={{ color: 'var(--accent-gold)', marginBottom: '10px', fontSize: '1.1rem' }}>
+              <div className="corp-sub-card">
+                <h4>
                   <i className="fa-solid fa-clock-rotate-left" style={{ marginRight: '10px' }}></i> {t('history_title')}
                 </h4>
                 <p style={{ fontSize: '0.9rem' }}>{t('history_text')}</p>
@@ -213,8 +213,8 @@ export default function HomePage() {
             <div className="header-line"></div>
             <p>{t('contact_subtitle')}</p>
           </div>
-          <div className="map-container" style={{ position: 'relative', borderRadius: '12px', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.1)', height: '450px', background: '#111', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 0.4, backgroundImage: 'radial-gradient(circle, #333 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
+          <div className="map-canvas">
+            <div className="map-placeholder-dots"></div>
             <div style={{ zIndex: 2, textAlign: 'center' }}>
               <i className="fa-solid fa-map-location-dot" style={{ fontSize: '4rem', color: 'var(--accent-gold)', marginBottom: '15px' }}></i>
               <h3 style={{ fontSize: '1.5rem', marginBottom: '10px' }}>{t('map_title')}</h3>
