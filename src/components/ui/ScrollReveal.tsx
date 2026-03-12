@@ -1,32 +1,40 @@
 'use client';
 
 import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function ScrollReveal() {
+  const pathname = usePathname();
+
   useEffect(() => {
+    document.body.classList.add('js-available');
+    
     const observerOptions = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.15,
+      threshold: 0.1,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('reveal-active');
-          // Once revealed, we can unobserve if we only want it to happen once
           observer.unobserve(entry.target);
         }
       });
     }, observerOptions);
 
-    const revealElements = document.querySelectorAll('.reveal');
-    revealElements.forEach((el) => observer.observe(el));
+    // Short timeout to ensure elements are rendered in the DOM
+    const timer = setTimeout(() => {
+      const revealElements = document.querySelectorAll('.reveal');
+      revealElements.forEach((el) => observer.observe(el));
+    }, 100);
 
     return () => {
-      revealElements.forEach((el) => observer.unobserve(el));
+      clearTimeout(timer);
+      observer.disconnect();
     };
-  }, []);
+  }, [pathname]);
 
-  return null; // This component doesn't render anything, it just adds behavior
+  return null;
 }
