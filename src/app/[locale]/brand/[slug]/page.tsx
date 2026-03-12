@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
+import SafeImage from '@/components/ui/SafeImage';
 import { products } from '@/data/products';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
@@ -73,15 +73,11 @@ export default async function BrandPage({ params }: { params: Promise<{ slug: st
                         className="product-mini-card"
                     >
                         <div className="product-image-wrapper">
-                            <Image
+                            <SafeImage
                             src={product.imageUrl || '/images/jet-box.png'}
                             alt={`${product.brand} ${product.model}`}
                             width={300}
                             height={300}
-                            onError={(e) => {
-                                const target = e.target as HTMLImageElement;
-                                target.style.display = 'none';
-                            }}
                             />
                         </div>
                         <div style={{ padding: '20px', flex: 1, display: 'flex', flexDirection: 'column', gap: '8px' }}>
