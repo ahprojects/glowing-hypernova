@@ -355,9 +355,9 @@ ul {
 }
 
 .brand-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-12px) scale(1.02);
     border-color: var(--accent-gold);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 175, 55, 0.15);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 175, 55, 0.15);
 }
 
 .brand-logo-container {
@@ -869,6 +869,28 @@ ul {
     background: rgba(197, 160, 79, 0.15);
     border-color: var(--accent-gold);
 }
+
+/* Scroll Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.2s; }
+.reveal-delay-2 { transition-delay: 0.4s; }
+.reveal-delay-3 { transition-delay: 0.6s; }
+
+.reveal-left { transform: translateX(-30px); }
+.reveal-active.reveal-left { transform: translateX(0); }
+
+.reveal-right { transform: translateX(30px); }
+.reveal-active.reveal-right { transform: translateX(0); }
 
 /* Hero Buttons Variants */
 .btn-hunting {

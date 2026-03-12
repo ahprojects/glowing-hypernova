@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -50,6 +51,7 @@ export default async function LocaleLayout({
       </head>
       <body className={`${inter.variable} ${montserrat.variable} antialiased dark-theme`}>
         <NextIntlClientProvider messages={messages}>
+          <ScrollReveal />
           <Navbar />
           <main>{children}</main>
           <Footer />

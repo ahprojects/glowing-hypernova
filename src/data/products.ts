@@ -181,7 +181,7 @@ export const products: Product[] = [
     {
         id: 'gold-horse-32-taslak',
         brand: 'Gold Horse',
-        model: 'Classic 32gr (Taslak)',
+        model: 'Classic 32gr (CONCEPT SERIES)',
         caliber: '12',
         category: 'Av & Spor',
         description: 'Klasik avcılar için mükemmel basınç kontrolü ve gecikmeli açılma sağlayan Türkiye\'nin tek fişek mühürleme teknolojisi.',
@@ -336,7 +336,7 @@ export const products: Product[] = [
     {
         id: 'apollo-classic-quail',
         brand: 'APOLLO',
-        model: 'Bıldırcın Özel (Taslak)',
+        model: 'Bıldırcın Özel (CONCEPT SERIES)',
         caliber: '12',
         category: 'Av & Spor',
         description: 'Bıldırcın avı için optimize edilmiş, geniş dağılım ve yüksek grupman performansı sunan klasik av fişeği.',
@@ -353,6 +353,121 @@ export const products: Product[] = [
             { label: 'brass', value: 'TBA', icon: 'fa-ring' },
             { label: 'tube', value: '70 mm', icon: 'fa-cube' },
             { label: 'capacity', value: 'TBA', icon: 'fa-boxes-stacked' }
+        ]
+    },
+    {
+        id: 'apollo-28',
+        brand: 'APOLLO',
+        model: '28gr',
+        caliber: '12',
+        category: 'Av & Spor',
+        description: '28 gramlık plastik tapa ve yüksek namlu çıkış hızıyla dengeli atış performansı sunan çok amaçlı Apollo av fişeği.',
+        imageUrl: '/images/apollo-28.png',
+        gameRecommendations: [
+            { name: 'Çok Amaçlı Av', icon: 'fa-crow' },
+            { name: 'Keklik (Partridge)', icon: 'fa-dove' },
+            { name: 'Tahtalı (Pigeon)', icon: 'fa-feather' }
+        ],
+        specs: [
+            { label: 'load', value: '28 g', icon: 'fa-weight-scale' },
+            { label: 'size', value: '1 - 10', icon: 'fa-circle-dot' },
+            { label: 'wad', value: 'Plastik', icon: 'fa-wind' },
+            { label: 'muzzle', value: '440 m/s', icon: 'fa-bolt' },
+            { label: 'brass', value: '12 mm', icon: 'fa-ring' },
+            { label: 'tube', value: '70 mm', icon: 'fa-cube' },
+            { label: 'capacity', value: '25 / 250', icon: 'fa-boxes-stacked' }
+        ]
+    },
+    {
+        id: 'apollo-32',
+        brand: 'APOLLO',
+        model: '32gr',
+        caliber: '12',
+        category: 'Av & Spor',
+        description: '32 gramlık plastik tapa ve yüksek namlu çıkış hızıyla güçlü ve dengeli atış performansı sunan Apollo av fişeği.',
+        imageUrl: '/images/apollo-32.png',
+        gameRecommendations: [
+            { name: 'Sülün (Pheasant)', icon: 'fa-feather' },
+            { name: 'Keklik (Partridge)', icon: 'fa-dove' },
+            { name: 'Yaban Ördeği', icon: 'fa-water' }
+        ],
+        specs: [
+            { label: 'load', value: '32 g', icon: 'fa-weight-scale' },
+            { label: 'size', value: '1 - 10', icon: 'fa-circle-dot' },
+            { label: 'wad', value: 'Plastik', icon: 'fa-wind' },
+            { label: 'muzzle', value: '440 m/s', icon: 'fa-bolt' },
+            { label: 'brass', value: '12 mm', icon: 'fa-ring' },
+            { label: 'tube', value: '70 mm', icon: 'fa-cube' },
+            { label: 'capacity', value: '25 / 250', icon: 'fa-boxes-stacked' }
+        ]
+    },
+    {
+        id: 'apollo-34',
+        brand: 'APOLLO',
+        model: '34gr',
+        caliber: '12',
+        category: 'Av & Spor',
+        description: '34 gramlık plastik tapa ve yüksek namlu çıkış hızıyla zorlu av koşullarında üstün durdurucu güç sunan Apollo av fişeği.',
+        imageUrl: '/images/apollo-34.png',
+        gameRecommendations: [
+            { name: 'Ördek Avı', icon: 'fa-water' },
+            { name: 'Kaz Avı', icon: 'fa-feather' },
+            { name: 'Ağır Av', icon: 'fa-paw' }
+        ],
+        specs: [
+            { label: 'load', value: '34 g', icon: 'fa-weight-scale' },
+            { label: 'size', value: '1 - 10', icon: 'fa-circle-dot' },
+            { label: 'wad', value: 'Plastik', icon: 'fa-wind' },
+            { label: 'muzzle', value: '440 m/s', icon: 'fa-bolt' },
+            { label: 'brass', value: '16 mm', icon: 'fa-ring' },
+            { label: 'tube', value: '70 mm', icon: 'fa-cube' },
+            { label: 'capacity', value: '25 / 250', icon: 'fa-boxes-stacked' }
+        ]
+    },
+    {
+        id: 'apollo-36',
+        brand: 'APOLLO',
+        model: '36gr',
+        caliber: '12',
+        category: 'Av & Spor',
+        description: '36 gramlık en yüksek atış gücü ve plastik tapa yapısıyla en zorlu av koşullarında maksimum durdurucu güç sağlayan Apollo av fişeği.',
+        imageUrl: '/images/apollo-36.png',
+        gameRecommendations: [
+            { name: 'Kaz Avı', icon: 'fa-feather' },
+            { name: 'Ördek Avı', icon: 'fa-water' },
+            { name: 'Ağır Tip Av', icon: 'fa-paw' }
+        ],
+        specs: [
+            { label: 'load', value: '36 g', icon: 'fa-weight-scale' },
+            { label: 'size', value: '1 - 10', icon: 'fa-circle-dot' },
+            { label: 'wad', value: 'Plastik', icon: 'fa-wind' },
+            { label: 'muzzle', value: '440 m/s', icon: 'fa-bolt' },
+            { label: 'brass', value: '16 mm', icon: 'fa-ring' },
+            { label: 'tube', value: '70 mm', icon: 'fa-cube' },
+            { label: 'capacity', value: '25 / 250', icon: 'fa-boxes-stacked' }
+        ]
+    },
+    {
+        id: 'apollo-bildircin',
+        brand: 'APOLLO',
+        model: 'Bıldırcın Özel 22gr',
+        caliber: '12',
+        category: 'Av & Spor',
+        description: 'Bıldırcın avı için özel olarak üretilmiş, 22 gramlık yük ve No.9 saçma ile geniş dağılım ve hassas grupman sunan Apollo av fişeği.',
+        imageUrl: '/images/apollo-bildircin.png',
+        gameRecommendations: [
+            { name: 'Bıldırcın (Quail)', icon: 'fa-crow' },
+            { name: 'Çulluk (Woodcock)', icon: 'fa-tree' },
+            { name: 'Küçük Av', icon: 'fa-feather' }
+        ],
+        specs: [
+            { label: 'load', value: '22 g', icon: 'fa-weight-scale' },
+            { label: 'size', value: '9', icon: 'fa-circle-dot' },
+            { label: 'wad', value: 'Plastik', icon: 'fa-wind' },
+            { label: 'muzzle', value: '440 m/s', icon: 'fa-bolt' },
+            { label: 'brass', value: '12 mm', icon: 'fa-ring' },
+            { label: 'tube', value: '70 mm', icon: 'fa-cube' },
+            { label: 'capacity', value: '25 / 250', icon: 'fa-boxes-stacked' }
         ]
     },
     {
@@ -468,7 +583,7 @@ export const products: Product[] = [
     {
         id: 'apport-sporting-28',
         brand: 'APPORT',
-        model: 'Sporting High Velocity (Taslak)',
+        model: 'Sporting High Velocity (CONCEPT SERIES)',
         caliber: '12',
         category: 'Av & Spor',
         description: 'Sporting ve genel atış müsabakaları için üretilmiş, yüksek hız ve düşük basınç dengesine sahip spor fişeği.',

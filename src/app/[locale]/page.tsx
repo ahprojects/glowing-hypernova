@@ -38,7 +38,7 @@ export default function HomePage() {
       {/* Product Catalog / Brands Showcase */}
       <section id="catalog" className="brands-section section-padding">
         <div id="brands" className="container">
-          <div className="section-header text-center">
+          <div className="section-header text-center reveal">
             <h2 className="font-heritage" style={{ fontSize: '3.5rem', letterSpacing: '1px' }}>{t('catalog_section_title')} <span className="text-gold">{t('catalog_section_title_gold')}</span></h2>
             <div className="header-line"></div>
             <p style={{ letterSpacing: '0.5px' }}>{t('catalog_section_subtitle')}</p>
@@ -52,7 +52,7 @@ export default function HomePage() {
 
           <div className="brands-grid" style={{ marginBottom: '60px' }}>
             {/* JET */}
-            <Link href="/brand/jet" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
+            <Link href="/brand/jet" className="brand-card shadow-hover reveal reveal-delay-1" style={{ textDecoration: 'none' }}>
               <div className="brand-logo-container">
                 <h3 className="brand-name jet-brand" style={{ fontSize: '2.5rem' }}>JET<span style={{ fontSize: '1rem', fontStyle: 'normal', background: 'none', WebkitTextFillColor: '#aaa', verticalAlign: 'super' }}>®</span></h3>
               </div>
@@ -64,7 +64,7 @@ export default function HomePage() {
             </Link>
 
             {/* APPORT */}
-            <Link href="/brand/apport" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
+            <Link href="/brand/apport" className="brand-card shadow-hover reveal reveal-delay-2" style={{ textDecoration: 'none' }}>
               <div className="brand-logo-container">
                 <h3 className="brand-name" style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 800, color: '#3498db', letterSpacing: '1px' }}>
                   APPORT
@@ -79,7 +79,7 @@ export default function HomePage() {
           </div>
 
           {/* IDETECH */}
-          <div id="idetech-defense" className="brand-card defense-brand-card">
+          <div id="idetech-defense" className="brand-card defense-brand-card reveal">
             <div className="brand-logo-container">
               <h3 className="brand-name jet-brand" style={{ color: '#e74c3c', background: 'none', WebkitTextFillColor: '#e74c3c', fontSize: '3rem' }}>
                 IDETECH
@@ -89,15 +89,15 @@ export default function HomePage() {
             <p className="section-subtitle-premium" style={{ maxWidth: '800px', marginBottom: '30px' }}>{t('idetech_desc')}</p>
 
             <div className="defense-grid">
-              <div className="defense-feature">
+              <div className="defense-feature reveal reveal-delay-1">
                 <h5><i className="fa-solid fa-shield-virus"></i> {t('idetech_less_lethal')}</h5>
                 <p style={{ fontSize: '0.9rem', color: '#ccc' }}>{t('idetech_less_lethal_desc')}</p>
               </div>
-              <div className="defense-feature">
+              <div className="defense-feature reveal reveal-delay-2">
                 <h5><i className="fa-solid fa-door-open"></i> {t('idetech_breach')}</h5>
                 <p style={{ fontSize: '0.9rem', color: '#ccc' }}>{t('idetech_breach_desc')}</p>
               </div>
-              <div className="defense-feature">
+              <div className="defense-feature reveal reveal-delay-3">
                 <h5><i className="fa-solid fa-smog"></i> {t('idetech_cs')}</h5>
                 <p style={{ fontSize: '0.9rem', color: '#ccc' }}>{t('idetech_cs_desc')}</p>
               </div>
@@ -108,14 +108,14 @@ export default function HomePage() {
             </a>
           </div>
 
-          {/* Heritage & Classic Line */}
-          <div style={{ textAlign: 'center', marginBottom: '40px', marginTop: '80px' }}>
+          <div className="section-header text-center reveal" style={{ marginBottom: '40px', marginTop: '80px' }}>
             <h3 className="font-heritage" style={{ fontSize: '2.2rem', color: '#fff' }}>{t('heritage_classic_title')}</h3>
+            <div className="header-line"></div>
             <p style={{ color: '#9da3af' }}>{t('heritage_classic_desc')}</p>
           </div>
           <div className="brands-grid">
             {/* GOLD HORSE */}
-            <Link href="/brand/gold-horse" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
+            <Link href="/brand/gold-horse" className="brand-card shadow-hover reveal reveal-delay-1" style={{ textDecoration: 'none' }}>
               <div className="brand-logo-container">
                 <h3 className="brand-name gold-horse-brand">Gold Horse</h3>
               </div>
@@ -127,7 +127,7 @@ export default function HomePage() {
             </Link>
 
             {/* MIRACLE */}
-            <Link href="/brand/miracle" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
+            <Link href="/brand/miracle" className="brand-card shadow-hover reveal reveal-delay-2" style={{ textDecoration: 'none' }}>
               <div className="brand-logo-container">
                 <h3 className="brand-name" style={{ textTransform: 'lowercase', fontWeight: 500, fontFamily: 'var(--font-inter), sans-serif', letterSpacing: '1px', color: '#a0a0a0', fontSize: '2.2rem', borderBottom: '2px solid #555', paddingBottom: '5px' }}>
                   miracle
@@ -141,7 +141,7 @@ export default function HomePage() {
             </Link>
 
             {/* APOLLO */}
-            <Link href="/brand/apollo" className="brand-card shadow-hover" style={{ textDecoration: 'none' }}>
+            <Link href="/brand/apollo" className="brand-card shadow-hover reveal reveal-delay-3" style={{ textDecoration: 'none' }}>
               <div className="brand-logo-container">
                 <h3 className="brand-name apollo-brand" style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 800, color: '#2ecc71' }}>APOLLO</h3>
               </div>
@@ -153,7 +153,7 @@ export default function HomePage() {
             </Link>
 
             {/* CEO GUNS */}
-            <div id="ceo-guns" className="brand-card shadow-hover tactical-brand-card">
+            <div id="ceo-guns" className="brand-card shadow-hover tactical-brand-card reveal reveal-delay-3">
               <div className="brand-logo-container">
                 <h3 className="brand-name" style={{ fontFamily: 'var(--font-montserrat), sans-serif', fontWeight: 800, color: '#ecf0f1', background: 'none', WebkitTextFillColor: '#ecf0f1', letterSpacing: '2px' }}>
                   CEO GUNS
@@ -161,7 +161,7 @@ export default function HomePage() {
               </div>
               <h4 style={{ color: '#ecf0f1', marginBottom: '15px', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '1px' }}>{t('ceoguns_title')}</h4>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', lineHeight: '1.6' }}>{t('ceoguns_desc')}</p>
-              <a href="https://ceoguns.com.tr/#1" target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ marginTop: '25px', borderColor: '#7f8c8d', color: '#ecf0f1', padding: '12px 25px', fontSize: '0.9rem' }}>
+              <a href="https://ceoguns.com.tr/#1" target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-guns" style={{ marginTop: '25px', padding: '12px 25px', fontSize: '0.9rem' }}>
                 {t('visit_website')} <i className="fa-solid fa-arrow-up-right-from-square" style={{ marginLeft: '8px' }}></i>
               </a>
             </div>
@@ -172,14 +172,14 @@ export default function HomePage() {
       {/* Corporate Section */}
       <section id="corporate" className="corporate-section section-padding bg-darker" style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
         <div className="container">
-          <div className="section-header text-center">
+          <div className="section-header text-center reveal">
             <h2 className="font-heritage" style={{ fontSize: '3.5rem', letterSpacing: '1px' }}>{t('corporate_title')} <span className="text-gold">{t('corporate_title_gold')}</span></h2>
             <div className="header-line"></div>
             <p style={{ letterSpacing: '0.5px' }}>{t('corporate_subtitle')}</p>
           </div>
 
           <div className="corp-grid">
-            <div className="corp-main-card">
+            <div className="corp-main-card reveal reveal-left">
               <h3 style={{ fontSize: '1.5rem', marginBottom: '20px', color: '#fff' }}>Hakkımızda</h3>
               <p style={{ lineHeight: '1.8', fontSize: '1rem', color: 'var(--text-secondary)' }}>
                 {t('about_text')}
@@ -187,14 +187,14 @@ export default function HomePage() {
             </div>
 
             <div className="corp-sub-column">
-              <div className="corp-sub-card">
+              <div className="corp-sub-card reveal reveal-right reveal-delay-1">
                 <h4>
                   <i className="fa-solid fa-bullseye" style={{ marginRight: '10px' }}></i> {t('mission_title')}
                 </h4>
                 <p style={{ fontSize: '0.9rem' }}>{t('mission_text')}</p>
               </div>
 
-              <div className="corp-sub-card">
+              <div className="corp-sub-card reveal reveal-right reveal-delay-2">
                 <h4>
                   <i className="fa-solid fa-clock-rotate-left" style={{ marginRight: '10px' }}></i> {t('history_title')}
                 </h4>
@@ -208,12 +208,12 @@ export default function HomePage() {
       {/* Dealer Map Section (Contact) */}
       <section id="contact" className="dealers-section section-padding bg-dark" style={{ borderTop: '1px solid rgba(255,255,255,0.05)' }}>
         <div className="container">
-          <div className="section-header text-center">
+          <div className="section-header text-center reveal">
             <h2>{t('contact_title')} <span className="text-gold">{t('contact_title_gold')}</span></h2>
             <div className="header-line"></div>
             <p>{t('contact_subtitle')}</p>
           </div>
-          <div className="map-canvas">
+          <div className="map-canvas reveal">
             <div className="map-placeholder-dots"></div>
             <div style={{ zIndex: 2, textAlign: 'center' }}>
               <i className="fa-solid fa-map-location-dot" style={{ fontSize: '4rem', color: 'var(--accent-gold)', marginBottom: '15px' }}></i>
