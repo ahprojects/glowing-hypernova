@@ -83,7 +83,10 @@
             "prof_tactical_title": "Profesyonel ve Taktik Seri",
             "prof_tactical_desc": "Müsabaka ve savunma alanında üstün performans için tasarlandı.",
             "heritage_classic_title": "Klasik ve Miras Serisi",
-            "heritage_classic_desc": "Klasik avcılar için zamana meydan okuyan gelenek ve eşsiz güvenilirlik."
+            "heritage_classic_desc": "Klasik avcılar için zamana meydan okuyan gelenek ve eşsiz güvenilirlik.",
+            "hunting_brands_title": "Av ve Spor Markalarımız",
+            "defense_brands_title": "Savunma ve Taktik Çözümleri",
+            "rifles_brands_title": "CEO Guns Ürünleri"
         },
         "Navbar": {
             "home": "Ana Sayfa",

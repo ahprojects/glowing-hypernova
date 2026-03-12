@@ -83,7 +83,10 @@
             "prof_tactical_title": "Professional & Tactical Line",
             "prof_tactical_desc": "Engineered for ultimate performance in competition and defense.",
             "heritage_classic_title": "Heritage & Classic Line",
-            "heritage_classic_desc": "Time-honored tradition and unmatched reliability for the classic hunter."
+            "heritage_classic_desc": "Time-honored tradition and unmatched reliability for the classic hunter.",
+            "hunting_brands_title": "Our Hunting & Sport Brands",
+            "defense_brands_title": "Defense & Tactical Solutions",
+            "rifles_brands_title": "CEO Guns Products"
         },
         "Navbar": {
             "home": "Home",

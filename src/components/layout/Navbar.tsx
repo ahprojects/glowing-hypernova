@@ -34,13 +34,10 @@ export default function Navbar() {
                         <Link href="/" className={pathname === '/' ? 'active' : ''}>{t('home')}</Link>
                     </li>
                     <li>
-                        <Link href="/#brands">{t('brands')}</Link>
-                    </li>
-                    <li>
-                        <Link href="/#catalog">{t('catalog')}</Link>
-                    </li>
-                    <li>
                         <Link href="/#corporate">{t('corporate')}</Link>
+                    </li>
+                    <li>
+                        <Link href="/#catalog">{t('brands')}</Link>
                     </li>
                     <li>
                         <Link href="/#contact">{t('contact')}</Link>
