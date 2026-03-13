@@ -18,7 +18,10 @@
     --font-heritage: 'Playfair Display', serif;
     --accent-red: #e74c3c;
     --accent-red-dark: #c0392b;
+    --accent-idetech: #004b5e;
+    --accent-idetech-dark: #003440;
 }
+
 
 * {
     margin: 0;
@@ -125,6 +128,29 @@ ul {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15);
 }
+
+.btn-hunting {
+    border-color: var(--accent-gold);
+    color: var(--accent-gold);
+}
+
+.btn-defense {
+    border-color: var(--accent-red);
+    color: var(--accent-red);
+}
+
+.btn-idetech {
+    background: linear-gradient(135deg, var(--accent-idetech), var(--accent-idetech-dark));
+    color: white;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 75, 94, 0.2);
+}
+
+.btn-idetech:hover {
+    background: linear-gradient(135deg, var(--accent-idetech-dark), var(--accent-idetech));
+    box-shadow: 0 12px 25px rgba(0, 75, 94, 0.4);
+}
+
 
 /* Navigation & Language Switch */
 .lang-switch {
@@ -545,6 +571,12 @@ ul {
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(212, 175, 55, 0.15);
 }
 
+.brand-card.defense-brand-card:hover {
+    border-color: var(--accent-idetech);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 75, 94, 0.25);
+}
+
+
 .brand-card::after {
     content: '';
     position: absolute;
@@ -562,8 +594,9 @@ ul {
 }
 
 .brand-card.defense-brand-card::after {
-    background: var(--accent-red);
+    background: var(--accent-idetech);
 }
+
 
 .brand-card.tactical-brand-card::after {
     background: #7f8c8d;
@@ -635,15 +668,26 @@ ul {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 5px rgba(46, 204, 113, 0.2));
 }
 
-.ide-brand {
-    color: var(--accent-red);
-    background: none;
-    -webkit-text-fill-color: var(--accent-red);
-    font-size: 3.5rem;
-    letter-spacing: -1px;
+.brand-card:hover .apollo-brand {
+    filter: drop-shadow(0 0 15px rgba(46, 204, 113, 0.4));
 }
+
+
+.ide-brand {
+    max-width: 280px;
+    height: auto;
+    filter: drop-shadow(0 0 8px rgba(0, 75, 94, 0.3));
+    transition: all 0.4s ease;
+}
+
+.brand-card:hover .ide-brand {
+    filter: drop-shadow(0 0 15px rgba(0, 75, 94, 0.5));
+    transform: scale(1.05);
+}
+
 
 .ceo-brand {
     font-family: var(--font-montserrat), sans-serif;

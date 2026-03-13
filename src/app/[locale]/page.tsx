@@ -197,7 +197,14 @@ export default function HomePage() {
             
             <div id="idetech-defense" className="brand-card defense-brand-card reveal">
               <div className="brand-logo-container">
-                <h3 className="brand-name ide-brand">IDETECH</h3>
+                <Image 
+                  src="/idetech-logo.png" 
+                  alt="IDETECH Logo" 
+                  width={280} 
+                  height={80} 
+                  className="ide-brand"
+                  style={{ objectFit: 'contain' }}
+                />
               </div>
               <h4 className="ide-title">{t('idetech_title')}</h4>
               <p className="section-subtitle-premium">{t('idetech_desc')}</p>
@@ -217,10 +224,11 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <a href="https://idetech.com.tr/" target="_blank" rel="noopener noreferrer" className="btn btn-primary ide-btn">
+              <a href="https://idetech.com.tr/" target="_blank" rel="noopener noreferrer" className="btn btn-primary btn-idetech ide-btn">
                 {t('visit_website')} <i className="fa-solid fa-arrow-up-right-from-square"></i>
               </a>
             </div>
+
           </div>
 
           {/* Rifles Group */}
